@@ -1,11 +1,18 @@
 class Pet {
-    constructor(name,species,color){
+    static pets = []
+    constructor(name,color,species){
         this.name = name
-        this.species = species
         this.color = color
+        this.species = species
+    }
+
+    static addToArray(pet){
+        Pet.pets.push(pet)
     }
 
     changeName(name){
         this.name = name
     }
 }
+
+module.exports = Pet
